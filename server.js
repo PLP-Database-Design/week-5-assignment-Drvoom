@@ -1,3 +1,7 @@
+const express = require('express')
+const app = express()
+
+
 //question 1
 
 app.get('/patients', (req, res) => {
@@ -48,3 +52,11 @@ app.get('/providers/specialty/:specialty', (req, res) => {
     res.status(200).json(results);
   });
 });
+
+
+
+// listen to the server
+const PORT = 3000
+app.listen(PORT, () => {
+  console.log(`server is runnig on http://localhost:${PORT}`)
+})
